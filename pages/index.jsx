@@ -1,5 +1,7 @@
 import Navbar from '../Components/NavbarFixedScroll'
 import HeaderSection from '../Components/sections/VideoHeader'
+import AboutUsSection from '../Components/sections/Aboutus'
+import KitSection from '../Components/sections/Kitsection'
 export default function Home() {
   return (
     <>
@@ -9,7 +11,8 @@ export default function Home() {
         title="Empowering prosumers to monetize as they decarbonize"
         titleColored="The new lungs of our cities"
       />
-      <div className="h-screen w-full bg-blue-300"></div>
+      <AboutUsSection />
+      <KitSection />
     </>
   )
 }

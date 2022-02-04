@@ -50,9 +50,9 @@ const NavbarFixedScroll = ({ src }) => {
         </div>
         {/*Contenedor de enlaces de navegacion*/}
         <div className="flex w-3/6 flex-col items-center justify-center">
-          <ul className="flex space-x-4 bg-white">
+          <ul className="flex space-x-4 ">
             {links.map((li, i) => (
-              <li key={i} className="text-2xl font-semibold">
+              <li key={i} className="text-lg font-semibold">
                 {li.title}
               </li>
             ))}
