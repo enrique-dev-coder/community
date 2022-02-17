@@ -9,7 +9,7 @@ const VideoBg = ({ children }) => {
         loop
         muted
         autoPlay
-        className="absolute inset-0 z-0 w-full"
+        className="absolute top-0 z-0 w-full  lg:-top-[240px]"
       />
       <div className="relative z-10">{children}</div>
     </div>

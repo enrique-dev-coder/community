@@ -8,6 +8,153 @@
   font-weight: 400;
   font-style: normal;
 }
+@layer components {
+  .containerWithMargin {
+    @apply container relative mx-auto grid  w-4/5 grid-cols-1  lg:grid-cols-12 xl:max-w-6xl;
+  }
+  .marginBottomForMobile {
+    @apply mb-10 lg:mb-0;
+  }
+  .marginTopForMobile {
+    @apply mt-10 lg:mb-0;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Roboto Mono', monospace;
+  background-color: white;
+  overflow-x: hidden;
+}
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+.flip-card .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card .inner .front,
+.flip-card .inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flip-card .inner .front {
+  background-color: #ffff;
+}
+.flip-card .inner .back {
+  background-color: '#F0EDFF';
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card .inner .front,
+.flip-card .inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flip-card .inner .front {
+  background-color: #fff;
+}
+
+.flip-card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+#nav-icon1 {
+  width: 60px;
+  height: 45px;
+  position: relative;
+
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  background: #9885f7;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 20px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 30px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }

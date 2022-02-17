@@ -6,8 +6,8 @@ const FadeinParagraph = ({ children }) => {
   //usando variantes vmaos a decrile a framer motion que anime de inicia a fin desde initial a hidden, el problema es que stas animaciones se cargan
   // al inciar la pagina por eso debemos indicar cuando queremos que s ecargen con Framer motion
   const divVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, transition: { duration: 2 } },
+    hidden: { opacity: 0 },
   }
   const controls = useAnimation()
   const [ref, inView] = useInView()
