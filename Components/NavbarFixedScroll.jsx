@@ -53,7 +53,7 @@ const NavbarFixedScroll = ({ src }) => {
       >
         {/*Contenedor de logo*/}
         <div
-          className={`h-15 w-50 opacity-0  lg:h-20  lg:w-60 ${
+          className={`h-15 w-[200px] opacity-0  lg:h-20  lg:w-60 ${
             !top && ' opacity-100 transition-opacity duration-300 ease-in-out'
           }`}
         >

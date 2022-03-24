@@ -24,6 +24,7 @@ const CaseMenu = ({ places }) => {
   }
   return (
     <>
+      {/*menu for desktop*/}
       <div className="container mx-auto hidden justify-around bg-purpleCommunity uppercase lg:flex lg:text-sm xl:text-lg">
         {places.map((p, i) => (
           <div
@@ -49,6 +50,7 @@ const CaseMenu = ({ places }) => {
         ))}
         {/*slider*/}
       </div>
+      {/*menu for mobile*/}
       <div className=" mb-8 flex justify-center space-x-5 lg:hidden">
         <p
           className={`text-xl font-bold ${
@@ -75,18 +77,19 @@ const CaseMenu = ({ places }) => {
           3
         </p>
       </div>
-      <div className="container relative mx-auto">
+      {/*slides*/}
+      <div className="container relative mx-auto mb-8 lg:mb-0">
         {/*arrows*/}
-        <div className="absolute  top-[8%] left-0 z-10 lg:top-2/4">
+        <div className="absolute  top-[8%] left-0 z-10 cursor-pointer lg:top-2/4">
           <img src="img/left.png" alt="left" onClick={() => leftArrow()} />
         </div>
-        <div className="absolute right-0  top-[8%] z-10 lg:top-2/4">
+        <div className="absolute right-0  top-[8%] z-10 cursor-pointer lg:top-2/4">
           <img src="img/right.png" alt="left" onClick={() => rightArrow()} />
         </div>
         {number === 0 && (
           <FadeInElement>
             <Slide
-              img="/img/purplecase.png"
+              img="/img/cases/Basset.png"
               place="Basset Avocado,California"
               title="Existing Community Electrification"
               textcolor="#9885F7"
@@ -127,15 +130,11 @@ const CaseMenu = ({ places }) => {
         {number === 2 && (
           <FadeInElement>
             <Slide
-              img="/img/redcase.png"
-              place="Freeport,Texas"
-              title="Corporation Community Decarbonation"
-              textcolor="#DA1212"
+              img="/img/cases/SantaMonica.png"
+              place="Santa Monica,California"
+              title="Affordable Housing Community Decarbonization"
+              textcolor="#66d9ff"
               content={[
-                {
-                  img: '/img/icons/EV Van Pooling.png',
-                  desc: 'EV Van pooling',
-                },
                 {
                   img: '/img/icons/Smart Thermostat.png',
                   desc: 'Smart Thermostat',
@@ -156,10 +155,6 @@ const CaseMenu = ({ places }) => {
                   img: '/img/icons/Carbon Management.png',
                   desc: 'Carbon Management',
                 },
-                {
-                  img: '/img/icons/Community Solar.png',
-                  desc: 'Community Solar',
-                },
               ]}
             />
           </FadeInElement>
@@ -167,7 +162,7 @@ const CaseMenu = ({ places }) => {
         {number === 1 && (
           <FadeInElement>
             <Slide
-              img="/img/bluecase.png"
+              img="/img/cases/SantaAna.png"
               place="Santa Ana,California"
               title="New 100% Electric Affordable Housing & Retail Space"
               textcolor="#0149AC"

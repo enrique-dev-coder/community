@@ -1,13 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: 'OpenSauce';
 
-  src: url('../public/Open-Sauce-Sans/OpenSauceSans-Light.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
 @layer components {
   .containerWithMargin {
     @apply container relative mx-auto grid  w-4/5 grid-cols-1  lg:grid-cols-12 xl:max-w-6xl;

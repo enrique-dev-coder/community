@@ -26,6 +26,7 @@ const CaseMenu = ({ places }) => {
 
   return (
     <>
+      {/*menu for desktop*/}
       <div className="container mx-auto hidden justify-around bg-purpleCommunity uppercase lg:flex lg:text-sm  xl:text-lg">
         {places.map((p, i) => (
           <div
@@ -78,17 +79,17 @@ const CaseMenu = ({ places }) => {
           3
         </p>
       </div>
-      <div className="container relative mx-auto">
-        <div className="absolute top-[8%] left-0 z-10 lg:top-2/4">
+      <div className="container relative mx-auto mb-20 lg:mb-0">
+        <div className="absolute top-[8%] left-0 z-10 cursor-pointer lg:top-2/4">
           <img src="img/left.png" alt="left" onClick={() => leftArrow()} />
         </div>
-        <div className="absolute  top-[8%] right-0 z-10 lg:top-2/4">
+        <div className="absolute  top-[8%] right-0 z-10 cursor-pointer lg:top-2/4">
           <img src="img/right.png" alt="left" onClick={() => rightArrow()} />
         </div>
         {number === 0 && (
           <FadeInElement>
             <Slide
-              img="/img/greencase.png"
+              img="/img/cases/Medellin.png"
               place="Medellin, Colombia"
               title="Transactive Energy"
               textcolor="#01AD2F"
@@ -116,7 +117,7 @@ const CaseMenu = ({ places }) => {
         {number === 1 && (
           <FadeInElement>
             <Slide
-              img="/img/skycase.png"
+              img="/img/cases/Santiago.png"
               place="Santiago del Estero,Argentina"
               title="LAB"
               textcolor="#8CBCE0"
@@ -141,7 +142,7 @@ const CaseMenu = ({ places }) => {
         {number === 2 && (
           <FadeInElement>
             <Slide
-              img="/img/yellowcase.png"
+              img="/img/cases/Valencia.png"
               place="Valencia,Spain"
               title="Advanced Electricity Community"
               textcolor="#0149AC"

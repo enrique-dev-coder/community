@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import FadeInelement from '../FadeinElement'
+import Link from 'next/link'
 const Team = ({
   members,
   numberOfRows,
   numberOfElements,
   sectionTitle,
   bottomButton,
+  linkedinButton,
 }) => {
   //members es el array que recibe
   const [slide, setSlide] = useState(0)
 
   //funciones para hacer filas en el desktop
-  console.log(members)
   //funcion para recortar arrays
   //una funcion a la que le pasas el array, el numero de filas y el numeor de elemntos
   // y la idea es primero revisar que sean divisibles luego hacer un for con dos numeros para hacer un slice
@@ -19,22 +20,18 @@ const Team = ({
   //que se guarda en un array vacio para hacer un array de arrays
   let dividirArray = (array, nofilas, numel) => {
     let nuevosArrays = []
-    if (array.length % nofilas === 0) {
-      for (
-        let i = 0, j = numel;
-        i < array.length, j <= array.length;
-        i = i + numel, j = j + numel
-      ) {
-        nuevosArrays.push(array.slice(i, j))
-      }
-      return nuevosArrays
-    } else {
-      console.log('no puedes hacer esta operacion')
+    for (
+      let i = 0, j = numel;
+      i < array.length, j <= array.length;
+      i = i + numel, j = j + numel
+    ) {
+      nuevosArrays.push(array.slice(i, j))
     }
+    return nuevosArrays
   }
   //array con dos arrays cada uno de 4 elementos [Array(4),Array(4)]
   const arrayWitharrays = dividirArray(members, numberOfRows, numberOfElements)
-  console.log(arrayWitharrays)
+  //console.log(arrayWitharrays)
   //funciones para el slider
   const arrayId = (array) => {
     //const ids = array.map((m, i) => userId(`${m[i]}`))
@@ -79,11 +76,11 @@ const Team = ({
   returnLeft(members, slide)
 
   return (
-    <div className="container relative mx-auto h-screen w-4/5 max-w-6xl lg:h-auto ">
-      <div className="absolute top-[35%] left-0 z-10 lg:top-2/4 lg:hidden">
+    <div className="container relative mx-auto h-[83vh] w-4/5 max-w-6xl lg:h-auto ">
+      <div className="absolute top-[45%] left-0 z-10 lg:top-2/4 lg:hidden">
         <img src="img/left.png" alt="left" onClick={() => leftArrow()} />
       </div>
-      <div className="absolute top-[35%] right-0 z-10 lg:top-2/4 lg:hidden">
+      <div className="absolute top-[45%] right-0 z-10 lg:top-2/4 lg:hidden">
         <img src="img/right.png" alt="left" onClick={() => rightArrow()} />
       </div>
       <FadeInelement>
@@ -99,14 +96,14 @@ const Team = ({
           <div className=" flex w-full " key={i}>
             {array.map((m) => (
               <div
-                className={`group flex h-[310px] basis-1/3 transform cursor-pointer flex-col items-center justify-around rounded-md transition-colors duration-200 hover:bg-purpleCommunityLight lg:col-span-3`}
+                className={`group mb-8 flex h-[310px] basis-1/3 transform cursor-pointer flex-col items-center justify-around rounded-md transition-colors duration-200 hover:bg-purpleCommunityLight lg:col-span-3`}
                 key={i}
               >
                 <div className="h-[200px] w-[200px]">
                   <img
                     src={m.img}
                     alt={m.name}
-                    className="h-full w-full rounded-full"
+                    className="mx-auto h-[170px] w-[170px] rounded-full"
                   />
                 </div>
                 <a href={m.linkedin} target="_blank" rel="noopener noreferrer">
@@ -121,15 +118,17 @@ const Team = ({
                     {m.cofounder && 'Co-founder'}
                   </h4>
                 </div>
-                <a href={m.linkedin}>
-                  <img
-                    src="/img/linkedin.png"
-                    alt={m.linkedin}
-                    className="cursor-pointer"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                </a>
+                {m.linkedinButton && (
+                  <a href={m.linkedin}>
+                    <img
+                      src="/img/linkedin.png"
+                      alt={m.linkedin}
+                      className="cursor-pointer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    />
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -161,11 +160,11 @@ const Team = ({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <h3 className="text-center text-2xl uppercase text-purpleCommunity group-hover:font-bold group-hover:underline">
+                    <h3 className="text-center text-base uppercase text-purpleCommunity group-hover:font-bold group-hover:underline">
                       {members[i].name}
                     </h3>
                   </a>
-                  <h4 className="text-center text-xl uppercase">
+                  <h4 className="text-center text-base uppercase">
                     {members[i].job}
                   </h4>
                 </div>
@@ -174,11 +173,15 @@ const Team = ({
         )
       }
       {bottomButton && (
-        <FadeInelement>
-          <h2 className="my-20 cursor-pointer text-center text-xl uppercase text-purpleCommunity">
-            Learn more
-          </h2>
-        </FadeInelement>
+        <Link href="/team">
+          <a>
+            <FadeInelement>
+              <h2 className="my-20 cursor-pointer text-center text-xl uppercase text-purpleCommunity">
+                Learn more
+              </h2>
+            </FadeInelement>
+          </a>
+        </Link>
       )}
     </div>
   )

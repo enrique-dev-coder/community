@@ -18,7 +18,7 @@ const VideoHeader = ({ src, title, titleColored }) => {
         <div>
           {/**Texto sombreadp */}
           <h2
-            className=" text-md  mx-auto  w-2/4 text-center font-bold uppercase tracking-wide text-black lg:text-xl"
+            className=" text-md  mx-auto  w-2/4 text-center font-bold uppercase tracking-wide text-white lg:text-xl"
             style={{ background: '#9885F7' }}
           >
             {titleColored}

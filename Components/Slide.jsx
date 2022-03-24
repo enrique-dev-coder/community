@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Modal from './ModalCase'
 const Slides = ({ img, title, place, content, textcolor }) => {
   const [open, setOpen] = useState(false)
-  console.log(open)
+  //console.log(open)
   return (
     <div className="relative  flex h-auto w-full flex-col lg:h-[90vh] lg:flex-row">
       {/*left*/}
@@ -34,19 +34,19 @@ const Slides = ({ img, title, place, content, textcolor }) => {
           <b className="text-xl">{place}</b>
         </h4>
         <h4 style={{ color: `${textcolor}` }}>
-          <b className="text-xl">{title}</b>
+          <b className="text-base lg:text-xl">{title}</b>
         </h4>
         <div>
           {content.map((el, i) => (
             <div
-              className="mx-auto mb-4 flex w-10/12 items-center space-x-4 text-xl lg:mx-0 "
+              className=" mb-4 flex w-10/12 items-center space-x-4 text-xl lg:mx-0 "
               key={i}
             >
-              <div className="h-10 w-10">
+              <div className="relative h-10 w-10">
                 <img src={el.img} alt={el.desc} className="h-full w-full" />
               </div>
               <div className="flex-1">
-                <p>{el.desc}</p>
+                <p className="text-base lg:text-xl">{el.desc}</p>
               </div>
             </div>
           ))}
