@@ -49,52 +49,54 @@ const Media = () => {
     },
   ]
   return (
-    <div className="container mx-auto mb-20 w-4/5 max-w-6xl" id="media">
-      <Fadeinelement>
-        <h2 className="mx-auto mb-20 w-full border-2 border-purpleCommunity py-2 text-center text-2xl uppercase lg:w-2/12">
-          Media
-        </h2>
-      </Fadeinelement>
-      {/*flipcards section*/}
-      <div className="mb-16 grid grid-cols-4 gap-4 lg:grid-cols-12">
-        {media.map((m, i) => (
-          <div
-            key={i}
-            className=" col-span-2 flex cursor-pointer flex-col justify-center border border-purpleCommunityLight shadow-sm lg:col-span-4"
-          >
-            <div className="flip-card">
-              <div className="inner">
-                <div className="front">
-                  <img
-                    src={m.img}
-                    alt={m.desc}
-                    className="w-[200px] grayscale"
-                  />
-                </div>
-                <div className="back flex flex-col justify-around">
-                  <p
-                    className="  lg:text-md text-center  text-sm text-black"
-                    style={{
-                      fontFamily: " 'Montserrat', sans-serif",
-                    }}
-                  >
-                    {m.desc} <br />
-                    <div className="mx-auto mt-4 w-3/5 cursor-pointer border border-purpleCommunity uppercase">
-                      <a
-                        href={m.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Read more
-                      </a>
-                    </div>
-                  </p>
+    <div className=" bg-purpleCommunityLight py-20">
+      <div className="container mx-auto mb-20 w-4/5 max-w-6xl " id="media">
+        <Fadeinelement>
+          <h2 className="mx-auto mb-10 w-full border-2 border-purpleCommunity py-2 text-center text-xl uppercase lg:w-1/12">
+            Media
+          </h2>
+        </Fadeinelement>
+        {/*flipcards section*/}
+        <div className="grid grid-cols-4 gap-4 lg:grid-cols-12">
+          {media.map((m, i) => (
+            <div
+              key={i}
+              className=" col-span-2 flex cursor-pointer flex-col justify-center border border-purpleCommunityLight shadow-sm lg:col-span-4"
+            >
+              <div className="flip-card">
+                <div className="inner">
+                  <div className="front">
+                    <img
+                      src={m.img}
+                      alt={m.desc}
+                      className="w-[200px] grayscale"
+                    />
+                  </div>
+                  <div className="back flex flex-col justify-around">
+                    <p
+                      className="  lg:text-md text-center  text-sm text-black"
+                      style={{
+                        fontFamily: " 'Montserrat', sans-serif",
+                      }}
+                    >
+                      {m.desc} <br />
+                      <div className="mx-auto mt-4 w-3/5 cursor-pointer border border-purpleCommunity uppercase">
+                        <a
+                          href={m.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Read more
+                        </a>
+                      </div>
+                    </p>
+                  </div>
                 </div>
               </div>
+              {/* <img src={m.img} alt={m.desc} className="mx-auto  w-[200px]" />*/}
             </div>
-            {/* <img src={m.img} alt={m.desc} className="mx-auto  w-[200px]" />*/}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

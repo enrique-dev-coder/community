@@ -1,22 +1,19 @@
 import React from 'react'
 import FadeinElement from '../FadeinElement'
+import FadeinImg from '../FadeinImg'
 const Howwedoit = () => {
   return (
     <div className="relative max-w-[1440px] overflow-x-hidden lg:mx-auto lg:w-[95%]  lg:pt-14 xl:pt-0">
       <div className="absolute hidden     lg:-right-[50px] lg:top-[3px] lg:block xl:top-[90px] xl:-right-[25px] ">
         <img src="/img/puzzle1.png" />
       </div>
-
-      <div className="container mx-auto mb-40 grid w-4/5  grid-cols-4 lg:grid-cols-12 xl:max-w-6xl">
-        <div className=" col-span-6 hidden lg:inline-grid">
-          <img src="/img/howwedoit.png" alt="How we do it" className="w-full" />
-        </div>
+      <div className="container mx-auto mb-20  flex w-4/5 flex-col lg:flex-row xl:max-w-6xl">
         {/*title and text container*/}
-        <div className="col-span-4 flex flex-col justify-center lg:col-span-5 lg:col-start-8">
+        <div className=" flex w-full flex-col justify-center  lg:w-[60%]">
           {/*title container*/}
-          <div className="mb-4 flex lg:justify-end">
+          <div className="mb-8 flex w-full lg:w-[35%]">
             <FadeinElement>
-              <h2 className="border border-purpleCommunity px-6  py-2 text-[22px] uppercase lg:text-2xl">
+              <h2 className="border border-purpleCommunity px-6 py-2 text-center text-[22px] uppercase lg:text-2xl">
                 How we do it
               </h2>
             </FadeinElement>
@@ -29,28 +26,29 @@ const Howwedoit = () => {
             }}
           >
             <FadeinElement>
-              <p className=" text-left text-base lg:text-right lg:text-xl ">
-                We use a<b> whole-system </b>thinking and data-driven{' '}
-                <b className=" text-purpleCommunity">
-                  decarbonization protocol
-                </b>{' '}
-                to orchestrate and fund the necessary steps of our prosumer
-                communities'<b>development </b> and <b>deployment.</b>
+              <p className=" mb-2 w-full text-sm lg:w-4/5 lg:text-left  lg:text-base ">
+                We created a decarbonization protocol that provides a
+                comprehensive pathway for the development of prosumer
+                communities.
               </p>
             </FadeinElement>
+            <FadeinElement>
+              <p className=" mb-4 w-full text-sm lg:w-4/5  lg:text-left  lg:text-base">
+                Through satellite monitoring, nodes, and blockchain
+                infrastructure, we collect data to{' '}
+                <b> benchmark, standardize and accelerate electrification.</b>
+              </p>
+            </FadeinElement>
+            <button className=" border-2 border-purpleCommunity px-8 py-2 text-sm font-bold  text-purpleCommunity lg:text-base">
+              Learn more
+            </button>
           </div>
           {/*boton de learn more */}
-          <div className="mb-4">
-            <FadeinElement>
-              <p className=" mr-auto w-[50%] rounded-md bg-purpleCommunity py-2 text-center text-xl font-bold tracking-wide text-white lg:ml-auto lg:mr-0 lg:w-[50%]">
-                learn more
-              </p>
-            </FadeinElement>
-          </div>
         </div>
-        {/*Image for mobile*/}
-        <div className=" col-span-4 mt-4  lg:hidden">
-          <img src="/img/howwedoit.png" alt="How we do it" className="w-full" />
+        <div className="w-full lg:w-[40%]">
+          <div>
+            <FadeinImg src="/img/howedoit2.png" alt="How we do it" />
+          </div>
         </div>
       </div>
     </div>

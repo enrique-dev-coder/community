@@ -24,6 +24,7 @@ const FadeinParagraph = ({ children }) => {
       animate={controls}
       initial="hidden"
       variants={divVariants}
+      className="w-full"
     >
       {children}
     </motion.div>
