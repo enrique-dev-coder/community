@@ -1,16 +1,33 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 
-const Video = ({ src }) => {
+//si el video es menos de 1 minuto de duaracion manda el gif solo en mobile
+
+const Video = ({ videosrc, imgsrc, menosDe1Min }) => {
+  const [isCellphone, setCellphone] = useState(false)
+  useEffect(() => {
+    const isCellphoneOn = window.innerWidth < 600 ? true : false
+    setCellphone(isCellphoneOn)
+  }, [])
+  console.log(isCellphone)
   return (
-    <div className=" mx-auto mb-16 w-4/5 lg:overflow-x-hidden xl:max-w-6xl">
+    <div className="mx-auto mb-16  w-4/5  lg:overflow-x-hidden xl:max-w-6xl">
       <video
-        src={src}
-        autoPlay
+        src={videosrc}
+        autoPlay={isCellphone}
         loop
         muted
+        controls={isCellphone}
         playsInline
-        className="mx-auto h-full w-full lg:w-10/12 "
+        className={`mx-auto ${
+          menosDe1Min && 'hidden'
+        }  h-full w-full lg:block lg:w-10/12 `}
       />
+      {menosDe1Min && (
+        <img
+          className=" mx-auto h-full w-full md:hidden lg:w-10/12 "
+          src={imgsrc}
+        />
+      )}
     </div>
   )
 }

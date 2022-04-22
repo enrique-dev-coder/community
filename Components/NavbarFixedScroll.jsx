@@ -30,7 +30,7 @@ const NavbarFixedScroll = ({ src }) => {
     },
     {
       title: 'Protocol',
-      link: '/',
+      link: '/protocol',
     },
 
     {

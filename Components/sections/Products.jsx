@@ -21,7 +21,7 @@ const Products = () => {
   return (
     <div className="relative max-w-[1440px] overflow-x-hidden lg:mx-auto lg:w-[95%]  lg:pt-14 xl:pt-8">
       <div className="absolute hidden lg:-left-[40px] lg:top-[20px] lg:block  xl:top-[6px]  xl:-left-[10px]">
-        <img src="/img/puzzle2.png" />
+        <img src="/img/puzzleFill2.png" />
       </div>
       <div className="container relative mx-auto mb-8 grid h-auto w-4/5 xl:max-w-6xl">
         <FadeinElement>

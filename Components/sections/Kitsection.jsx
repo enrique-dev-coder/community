@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import FadeinElement from '../FadeinElement'
 import Modal from '../SubscribeModal'
-const Kitsection = () => {
+const Kitsection = ({ img }) => {
   const [open, setOpen] = useState(false)
   return (
     <div className="container mx-auto grid grid-cols-4  lg:grid-cols-12  ">
@@ -30,11 +30,7 @@ const Kitsection = () => {
       <div className="col-span-4 mb-8 overflow-scroll lg:col-span-10 lg:col-start-2 lg:overflow-hidden">
         <div className="w-[900px] lg:mx-auto lg:w-11/12 ">
           <FadeinElement>
-            <img
-              src="/img/prosumerkit.png"
-              alt="prosumer kit"
-              className="h-full w-full"
-            />
+            <img src={img} alt="prosumer kit" className="h-full w-full" />
           </FadeinElement>
         </div>
       </div>

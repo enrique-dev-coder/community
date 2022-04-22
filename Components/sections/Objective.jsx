@@ -40,7 +40,7 @@ const Objective = () => {
     },
   ]
   return (
-    <div className=" mb-32 w-full bg-purpleCommunity py-8">
+    <div className="  w-full bg-purpleCommunity py-8">
       <div className="container mx-auto grid  grid-cols-4 lg:max-w-3xl lg:grid-cols-12 xl:max-w-6xl">
         {/*desktop contianer*/}
         <div className="col-span-4 mx-auto hidden w-4/5 lg:col-span-7 lg:block lg:w-full">

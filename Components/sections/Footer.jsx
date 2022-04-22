@@ -53,7 +53,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="mt-10 w-full overflow-x-hidden bg-black py-4">
+    <div className=" w-full overflow-x-hidden bg-black py-4">
       <div className="container relative mx-auto w-4/5 xl:max-w-6xl ">
         <div className="absolute -right-[15%] top-[25%] hidden lg:block">
           <img src="/img/footerpuzzle.png" alt="" />

@@ -1,9 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import FadeInelement from '../FadeinElement'
 
-const Partners = () => {
+const Partners = ({ arrows }) => {
   const [slide, setSlide] = useState(0)
-  const [slideCutter, setSlideCutter] = useState(3)
+  const [slideCutter, setSlideCutter] = useState(6)
+  useEffect(() => {
+    const Interval = setInterval(() => {
+      setSlide(slide + 6)
+      setSlideCutter(slideCutter + 6)
+    }, 3000)
+    return () => clearInterval(Interval)
+  })
   const partnersLogos = [
     { id: 0, img: '/img/partners/coalition.png' },
     {
@@ -107,16 +114,17 @@ const Partners = () => {
   }
 
   //funcion para el click del slide del desktop
+  //esto de aqui se tiene que poner en el use effect con el setInterval
   const rightArrowDesktop = () => {
-    setSlide(slide + 3)
-    setSlideCutter(slideCutter + 3)
+    setSlide(slide + 6)
+    setSlideCutter(slideCutter + 6)
     if (slide > 15) {
       setSlide(0)
     }
   }
   //por alguna razon no deja poner dos sets dentro del mismo if o dos if dentor de esa funcion
   if (slideCutter > 18) {
-    setSlideCutter(3)
+    setSlideCutter(6)
   }
 
   const leftArrowDesktop = () => {
@@ -149,27 +157,34 @@ const Partners = () => {
       </FadeInelement>
       {/*partners container desktop*/}
       <div className="relative  mx-auto hidden h-[300px] max-w-4xl  lg:flex lg:justify-around">
-        <div className="absolute  -left-[15px] top-[40%]">
-          <img
-            src="img/left.png"
-            alt="left"
-            onClick={() => leftArrowDesktop()}
-          />
-        </div>
-        <div className="absolute  -right-[15px] top-[40%]">
-          <img
-            src="img/right.png"
-            alt="left"
-            onClick={() => rightArrowDesktop()}
-          />
-        </div>
+        {arrows && (
+          <>
+            <div className="absolute  -left-[15px] top-[40%]">
+              <img
+                src="img/left.png"
+                alt="left"
+                onClick={() => leftArrowDesktop()}
+              />
+            </div>
+            <div className="absolute  -right-[15px] top-[40%]">
+              <img
+                src="img/right.png"
+                alt="left"
+                onClick={() => rightArrowDesktop()}
+              />
+            </div>
+          </>
+        )}
+
         {slideForDesktop.map((p) => (
           <div key={p.id} className=" flex basis-1/3 flex-col justify-center">
             <FadeInelement>
               <img
                 src={p.img}
                 alt="our partners"
-                className="mx-auto  w-3/4 grayscale"
+                className={`mx-auto  w-3/4 grayscale ${
+                  p.id === 2 && 'w-[60px]'
+                } `}
               />
             </FadeInelement>
           </div>
@@ -177,12 +192,21 @@ const Partners = () => {
       </div>
       {/*Partners container mobile*/}
       <div className="relative block w-full lg:hidden">
-        <div className="absolute top-[45%] -left-[15px] lg:top-2/4">
-          <img src="img/left.png" alt="left" onClick={() => leftArrow()} />
-        </div>
-        <div className="absolute  top-[45%] -right-[15px] lg:top-2/4">
-          <img src="img/right.png" alt="left" onClick={() => rightArrow()} />
-        </div>
+        {arrows && (
+          <>
+            <div className="absolute top-[45%] -left-[15px] lg:top-2/4">
+              <img src="img/left.png" alt="left" onClick={() => leftArrow()} />
+            </div>
+            <div className="absolute  top-[45%] -right-[15px] lg:top-2/4">
+              <img
+                src="img/right.png"
+                alt="left"
+                onClick={() => rightArrow()}
+              />
+            </div>
+          </>
+        )}
+
         <div className="flex h-[300px] flex-col justify-center">
           {justIds.map(
             //recuerda que el == se usa porque el array de ids esta en forma de strings

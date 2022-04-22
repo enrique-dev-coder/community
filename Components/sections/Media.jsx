@@ -49,10 +49,13 @@ const Media = () => {
     },
   ]
   return (
-    <div className=" bg-purpleCommunityLight py-20">
-      <div className="container mx-auto mb-20 w-4/5 max-w-6xl " id="media">
+    <div className=" bg-purpleCommunityLight pt-20 pb-1">
+      <div
+        className="container relative mx-auto mb-20 w-4/5 max-w-6xl "
+        id="media"
+      >
         <Fadeinelement>
-          <h2 className="mx-auto mb-10 w-full border-2 border-purpleCommunity py-2 text-center text-xl uppercase lg:w-1/12">
+          <h2 className="mx-auto mb-10 w-full border-2  border-purpleCommunity py-2 text-center text-xl uppercase text-communitygray lg:w-1/12">
             Media
           </h2>
         </Fadeinelement>
@@ -97,6 +100,9 @@ const Media = () => {
             </div>
           ))}
         </div>
+        <p className="mt-10 cursor-pointer text-center text-lg  font-medium uppercase text-purpleCommunity underline">
+          Learn more
+        </p>
       </div>
     </div>
   )

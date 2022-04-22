@@ -11,7 +11,7 @@ const VideoHeader = ({ src, title, titleColored }) => {
           <img src={src} alt="logo" className="h-full w-full" />
         </div>
         <div>
-          <h1 className="text-center text-lg uppercase tracking-wide lg:text-[22px] ">
+          <h1 className="text-center text-lg uppercase tracking-wide text-communitygray lg:text-[22px] ">
             {title}
           </h1>
         </div>

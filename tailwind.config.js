@@ -11,6 +11,8 @@ module.exports = {
       black: '#000000',
       purpleCommunity: '#9885F7',
       purpleCommunityLight: '#F0EDFF',
+      gray: '#424242',
+      communitygray: '#262626',
     },
   },
   plugins: [],

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PilotCard = ({ place, desc, img }) => {
+const PilotCard = ({ place, desc, img, showModal }) => {
   return (
     <div className="h-[225px] w-full border border-purpleCommunity md:h-[275px] md:w-[368px]">
       <div className="relative flex h-[80%]">
@@ -22,7 +22,10 @@ const PilotCard = ({ place, desc, img }) => {
           </div>
         </div>
       </div>
-      <p className="mr-5 cursor-pointer text-center text-purpleCommunity md:text-right">
+      <p
+        className="mr-5 cursor-pointer text-center text-purpleCommunity md:text-right"
+        onClick={showModal}
+      >
         Learn more &#8250;
       </p>
     </div>
