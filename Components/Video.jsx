@@ -8,12 +8,12 @@ const Video = ({ videosrc, imgsrc, menosDe1Min }) => {
     const isCellphoneOn = window.innerWidth < 600 ? true : false
     setCellphone(isCellphoneOn)
   }, [])
-  console.log(isCellphone)
+
   return (
     <div className="mx-auto mb-16  w-4/5  lg:overflow-x-hidden xl:max-w-6xl">
       <video
         src={videosrc}
-        autoPlay={isCellphone}
+        autoPlay={!isCellphone}
         loop
         muted
         controls={isCellphone}

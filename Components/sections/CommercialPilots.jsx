@@ -7,8 +7,8 @@ const CommercialPilots = () => {
     <div className="relative mb-20 max-w-[1440px] overflow-x-hidden lg:mx-auto lg:w-[95%]  lg:pt-14 xl:pt-0">
       <div className="mx-auto flex w-4/5 flex-col items-center justify-center lg:w-full">
         <FadeinElement>
-          <h2 className=" mx-auto mb-10 border border-purpleCommunity px-6 py-2 text-center   text-[22px] uppercase text-communitygray lg:w-[25%] lg:text-2xl">
-            COMMERCIAL PILOTS
+          <h2 className=" mx-auto mb-10 border border-purpleCommunity px-6 py-2 text-center   text-[22px] uppercase text-communitygray lg:w-[40%] lg:text-2xl">
+            CLIMATETECH INNOVATION ZONES
           </h2>
         </FadeinElement>
         <FadeinElement>
@@ -18,12 +18,10 @@ const CommercialPilots = () => {
               fontFamily: " 'Montserrat', sans-serif",
             }}
           >
-            Prosumer Electricity Community commercial pilots help us{' '}
-            <b>
-              develop benchmark data creating innovative tailor-made programs
-            </b>{' '}
-            to accelerate the decarbonization of disadvantaged communities (both
-            retrofit and new).
+            Climatetech Innovation Zones are Virtual Power Plant commercial
+            pilots that help develop benchmark data creating innovative
+            tailor-made decarbonization programs accelerating the
+            electrification of disadvantaged communities.
           </p>
         </FadeinElement>
 

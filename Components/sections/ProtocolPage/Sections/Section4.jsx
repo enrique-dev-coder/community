@@ -9,11 +9,13 @@ const Section4 = () => {
     <Container>
       <SectionImageRight img="/img/protocol/image4.png">
         <ParagraphContainers textcolor={'black'} margin={false}>
-          <TittleIcon
-            img="/img/protocol/Design.png"
-            title="Design"
-            textColor="text-purpleCommunity"
-          />
+          <div className="hidden lg:block">
+            <TittleIcon
+              img="/img/protocol/Design.png"
+              title="Design"
+              textColor="text-purpleCommunity"
+            />
+          </div>
           <p>
             Our cloud computing platform integrates multiple design processes
             using AI, and edge computing nodes to deliver speed, precision, and

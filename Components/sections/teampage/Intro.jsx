@@ -20,7 +20,7 @@ const Intro = () => {
     },
   }
   return (
-    <div className="  relative mb-10 flex h-auto w-full flex-col justify-center bg-purpleCommunity py-20 lg:h-screen lg:py-0">
+    <div className="  relative mb-10 flex h-auto w-full flex-col justify-center bg-[url('/img/team/Teambg.png')] bg-cover bg-center py-20 lg:h-screen lg:py-0">
       <div className="absolute bottom-[5%] right-[45%] hidden animate-bounce lg:right-[45%] lg:block">
         <img src="/img/downwhite.png" alt="scroll down" />
       </div>

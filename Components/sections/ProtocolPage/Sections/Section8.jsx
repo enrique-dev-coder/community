@@ -8,13 +8,15 @@ const Section8 = () => {
   return (
     <Container>
       <SectionImageRight img="/img/protocol/image8.png">
-        <ParagraphContainers textcolor={'black'} margin={true}>
-          <TittleIcon
-            img="/img/protocol/report.png"
-            title="Report"
-            textColor="text-purpleCommunity"
-            left="-90px"
-          />
+        <ParagraphContainers textcolor={'black'} margin={false}>
+          <div className="hidden lg:block">
+            <TittleIcon
+              img="/img/protocol/report.png"
+              title="Report"
+              textColor="text-purpleCommunity"
+              left="-70px"
+            />
+          </div>
           <p>
             IMPACT INDEX
             <br />

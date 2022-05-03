@@ -31,7 +31,7 @@ const Team = ({
   }
   //array con dos arrays cada uno de 4 elementos [Array(4),Array(4)]
   const arrayWitharrays = dividirArray(members, numberOfRows, numberOfElements)
-  //console.log(arrayWitharrays)
+  console.log(arrayWitharrays)
   //funciones para el slider
   const arrayId = (array) => {
     //const ids = array.map((m, i) => userId(`${m[i]}`))
@@ -84,7 +84,7 @@ const Team = ({
         <img src="img/right.png" alt="left" onClick={() => rightArrow()} />
       </div>
       <FadeInelement>
-        <h2 className="mx-auto mb-20 w-full border-2 border-purpleCommunity py-2 text-center text-2xl uppercase lg:w-2/12">
+        <h2 className="mx-auto mb-20 w-full border-2 border-purpleCommunity py-2 text-center text-2xl uppercase lg:w-4/12">
           {sectionTitle}
         </h2>
       </FadeInelement>
@@ -96,7 +96,13 @@ const Team = ({
           <div className=" flex w-full " key={i}>
             {array.map((m) => (
               <div
-                className={`group mb-8 flex h-[310px] basis-1/3 transform cursor-pointer flex-col items-center justify-around rounded-md transition-colors duration-200 hover:bg-purpleCommunityLight lg:col-span-3`}
+                className={`group mb-8 ${
+                  m.name === 'none' ? 'hidden' : 'flex'
+                }  h-[310px] basis-1/3 transform cursor-pointer flex-col items-center justify-around rounded-md transition-colors duration-200 ${
+                  m.id === 11
+                    ? ' hover:bg-white'
+                    : 'hover:bg-purpleCommunityLight'
+                }  lg:col-span-3`}
                 key={i}
               >
                 <div className="h-[200px] w-[200px]">

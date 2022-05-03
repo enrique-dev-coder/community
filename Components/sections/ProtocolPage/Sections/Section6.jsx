@@ -9,11 +9,13 @@ const Section6 = () => {
       <SectionImageRight img="/img/protocol/image6.png">
         <ParagraphContainers textcolor={'black'} margin={true}>
           <div className="mb-10">
-            <TittleIcon
-              img="/img/protocol/implement.png"
-              title="Implement"
-              textColor="text-purpleCommunity"
-            />
+            <div className="hidden lg:block">
+              <TittleIcon
+                img="/img/protocol/implement.png"
+                title="Implement"
+                textColor="text-purpleCommunity"
+              />
+            </div>
           </div>
           <ul className="list-disc">
             <li>Custom Evaluation</li>

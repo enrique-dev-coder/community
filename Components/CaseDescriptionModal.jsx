@@ -8,6 +8,8 @@ const CaseDescriptionModal = ({
   content,
   contractor,
   status,
+  country,
+  bgModalImage,
 }) => {
   return (
     <div>
@@ -26,18 +28,26 @@ const CaseDescriptionModal = ({
           </div>
           {/*parte blanca*/}
           <div
-            className="flex h-full w-full flex-col justify-center  rounded-tr-md rounded-tl-md rounded-br-md rounded-bl-md bg-white md:w-[60%]  md:rounded-tr-none md:rounded-bl-md md:rounded-br-none"
+            className="flex h-full w-full flex-col   rounded-tr-md rounded-tl-md rounded-br-md rounded-bl-md bg-white md:w-[60%]  md:rounded-tr-none md:rounded-bl-md md:rounded-br-none"
             style={{
               fontFamily: " 'Montserrat', sans-serif",
             }}
           >
-            <div className="mx-auto h-[80%] w-11/12 text-black ">
+            <div
+              className={`h-[30%] w-full ${bgModalImage}  bg-cover bg-center bg-no-repeat`}
+            ></div>
+            <div className="mx-auto h-[70%] w-11/12  overflow-y-auto text-black ">
               {/*intro container*/}
-              <div className="flex flex-col justify-between md:flex-row">
-                <p className="text-sm font-bold uppercase md:text-base">
-                  {place}
-                </p>
-                <p className="text-sm text-gray md:text-base">{intro}</p>
+              <div className="mt-10 flex flex-col justify-between md:flex-row">
+                <div>
+                  <p className="text-sm font-bold uppercase md:text-base">
+                    {place}
+                  </p>
+                  <p>{country}</p>
+                </div>
+                <div className="flex flex-col justify-end">
+                  <p className="text-sm text-gray md:text-base">{intro}</p>
+                </div>
               </div>
               {/*text container*/}
               <div>{text}</div>

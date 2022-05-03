@@ -4,10 +4,10 @@ import FadeinImg from '../FadeinImg'
 import FadeinElement from '../FadeinElement'
 const Aboutus = () => {
   return (
-    <div className="relative mb-10 max-w-[1440px] overflow-x-hidden lg:mx-auto  lg:w-[95%] lg:pt-24">
-      <div className="absolute hidden     lg:-right-[50px] lg:top-[55px] lg:block xl:-right-[14px] xl:top-[76px]">
+    <div className="relative mb-10 h-auto max-w-[1440px] overflow-x-hidden lg:mx-auto lg:h-[600px]  lg:w-[95%] lg:pt-24">
+      {/*      <div className="absolute hidden     lg:-right-[50px] lg:top-[55px] lg:block xl:-right-[14px] xl:top-[76px]">
         <img src="/img/puzzleFill.png" />
-      </div>
+      </div> */}
 
       <div
         className="container relative mx-auto   grid h-auto w-4/5 grid-cols-1 lg:grid-cols-12 xl:max-w-6xl "
@@ -32,7 +32,10 @@ const Aboutus = () => {
               <b>CommunityOS</b>, a decision-making platform powering a
               data-driven <b>decarbonization protocol</b> to assess, design, and
               orchestrate the development of{' '}
-              <b>Advanced Prosumer Communities.</b>
+              <b>
+                our community-scale Virtual Power Plants (VPPs) and
+                electrification programs.
+              </b>
             </p>
           </FadeinElement>
           <FadeinElement>
@@ -42,8 +45,8 @@ const Aboutus = () => {
                 fontFamily: " 'Montserrat', sans-serif",
               }}
             >
-              Advanced Prosumer Communities are{' '}
-              <b>networks of clean electricity assets</b> able to
+              <b>VPPs</b> are <b>networks of clean electricity assets</b> able
+              to
               <b> produce, consume and sell surplus</b> electricity back to the
               grid. These <b>decentralized, micro-utilities</b> are{' '}
               <b>designed to decarbonize communities</b> while improving air
@@ -56,9 +59,9 @@ const Aboutus = () => {
           </div>
         </div>
         {/*img container*/}
-        <div className="col-span-1  mt-12 hidden h-[286px] w-[559px] lg:col-span-7 lg:block xl:col-span-6  ">
+        <div className="col-span-1  hidden h-[286px] w-[559px] lg:col-span-7 lg:block xl:col-span-6  ">
           <FadeinElement>
-            <img src="/img/entorno-v2.png" className="" />
+            <img src="/img/entorno-v2.png" className="w-full" />
           </FadeinElement>
         </div>
         {/*contenedor de iamgen y parrafo*/}

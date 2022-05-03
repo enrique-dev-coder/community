@@ -2,12 +2,20 @@ import React from 'react'
 
 const SectionImageRight = ({ img, children }) => {
   return (
-    <div className="flex h-auto  w-full flex-col lg:h-[625px] lg:flex-row">
-      <div className="flex h-full basis-2/4 flex-col justify-center">
+    <div className="flex h-auto w-full  flex-col py-20 lg:h-[625px] lg:flex-row lg:py-0">
+      <div className=" mx-auto flex w-full flex-col justify-center lg:hidden lg:w-[40%]">
+        <img
+          src={img}
+          alt="protocol image"
+          className="mx-auto ml-auto w-[80%]"
+        />
+      </div>
+      <div className="flex h-[85%] w-full flex-col justify-center lg:w-[60%]">
         {children}
       </div>
-      <div className=" mx-auto flex basis-2/4 flex-col justify-center">
-        <img src={img} alt="protocol image" className="ml-auto w-[95%]" />
+      {/*image for desktop*/}
+      <div className=" mx-auto hidden w-full flex-col justify-center lg:flex lg:w-[40%]">
+        <img src={img} alt="protocol image" className="ml-auto w-full" />
       </div>
     </div>
   )

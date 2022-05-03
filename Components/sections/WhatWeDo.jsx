@@ -4,19 +4,11 @@ import FadeinElement from '../FadeinElement'
 import FadeinImg from '../FadeinImg'
 const WhatWeDo = () => {
   return (
-    <div className="relative max-w-[1440px] overflow-x-hidden lg:mx-auto lg:w-[95%]  lg:pt-10">
-      <div className="absolute hidden lg:-left-[45px] lg:top-[10px] lg:block  xl:-left-[10px] xl:top-[55px]">
+    <div className="relative h-auto max-w-[1440px] overflow-x-hidden  lg:mx-auto lg:h-[600px] lg:w-[95%]  lg:pt-10">
+      {/*    <div className="absolute hidden lg:-left-[45px] lg:top-[10px] lg:block  xl:-left-[10px] xl:top-[55px]">
         <img src="/img/puzzleFill2.png" />
-      </div>
+      </div> */}
       <div className="container relative mx-auto mb-10 flex h-auto w-4/5 flex-col lg:flex-row  xl:max-w-6xl ">
-        {/*img container*/}
-        <div className="w-4/4 hidden flex-col justify-center  md:flex md:w-2/4">
-          <div className="h-auto w-full md:h-[428px] md:w-[479px]">
-            <FadeinElement>
-              <img src="/img/whatwedo2.png" alt="what we do?" />
-            </FadeinElement>
-          </div>
-        </div>
         {/*text container*/}
         <div className=" w-4/4 flex flex-col space-y-5 md:w-2/4  xl:mt-12">
           {/*Contenedor de rompecabezas y titulo*/}
@@ -37,9 +29,7 @@ const WhatWeDo = () => {
                 }}
               >
                 We{' '}
-                <b>
-                  assess, orchestrate, and fund Advanced Prosumer Communities
-                </b>{' '}
+                <b>assess, orchestrate, and fund virtual power plants (VPPs)</b>{' '}
                 in partnership with cities, utilities, and real-estate
                 developers.
               </p>
@@ -51,8 +41,7 @@ const WhatWeDo = () => {
                   fontFamily: " 'Montserrat', sans-serif",
                 }}
               >
-                These Advanced Prosumer Communities are designed to accelerate
-                the clean electrification and{' '}
+                They are designed to accelerate the clean electrification and{' '}
                 <b>
                   decarbonization efforts of disadvantaged (i.e. Environmental
                   Justice) communities at scale.
@@ -66,8 +55,8 @@ const WhatWeDo = () => {
                   fontFamily: " 'Montserrat', sans-serif",
                 }}
               >
-                Our bottom-up approach starts with commercial
-                <b> pilots in high contamination score areas.</b>
+                Our bottom-up approach starts with <b>commercial pilots</b>
+                <b> in a high contamination score areas.</b>
               </p>
             </FadeinElement>
             <FadeinElement>
@@ -77,8 +66,7 @@ const WhatWeDo = () => {
                   fontFamily: " 'Montserrat', sans-serif",
                 }}
               >
-                In order to promote the development of Advanced Prosumer
-                Communities, we are developing a{' '}
+                In order to promote the development of VPPs, we are developing a{' '}
                 <b>
                   digital reward system backup by the monetization of (1)
                   net-metering, (2) grid services, and (3) renewable energy
@@ -86,20 +74,34 @@ const WhatWeDo = () => {
                 </b>
               </p>
             </FadeinElement>
+            <FadeinElement>
+              <p
+                className="mx-auto mb-4 whitespace-pre-line text-sm  text-purpleCommunity md:text-base lg:mx-0 "
+                style={{
+                  fontFamily: " 'Montserrat', sans-serif",
+                }}
+              >
+                <b>
+                  We incentivize participants to decarbonize collectively and
+                  get rewarded
+                </b>
+              </p>
+            </FadeinElement>
+          </div>
+        </div>
+        {/*img container*/}
+        <div className="w-4/4 hidden flex-col justify-center  md:flex md:w-2/4">
+          <div className="h-auto w-full md:h-[428px] md:w-[479px]">
+            <FadeinElement>
+              <img
+                src="/img/whatwedo2.png"
+                alt="what we do?"
+                className="h-full w-full"
+              />
+            </FadeinElement>
           </div>
         </div>
       </div>
-      <FadeinElement>
-        <p
-          className="text-center font-bold text-communitygray"
-          style={{
-            fontFamily: " 'Montserrat', sans-serif",
-          }}
-        >
-          We incentivize participants to decarbonize collectively and get
-          rewarded
-        </p>
-      </FadeinElement>
       {/*image container*/}
       {/*       <div className=" mb-20 flex justify-center">
         <div className="w-4/5 lg:w-[750px] ">

@@ -14,10 +14,11 @@ const BigPuzzle = () => {
               fontFamily: " 'Montserrat', sans-serif",
             }}
           >
-            We are implementing the largest Prosumer Community of its kind in
-            California. A network of over seventy distributed energy resources
-            connected to develop benchmark data and create decarbonization
-            programs for Disadvantaged/Environmental Justice Communities.
+            We are implementing the largest ClimateTech Innovation Zone of its
+            kind in California. A network of over seventy distributed energy
+            resources connected to develop benchmark data and create
+            decarbonization programs for Disadvantaged/Environmental Justice
+            Communities.
           </p>
           {/*div vacio para dar forma*/}
           <div className="flex h-full w-full flex-col justify-center  md:w-[50%]">
@@ -28,10 +29,11 @@ const BigPuzzle = () => {
               }}
             >
               {' '}
-              We are implementing the largest Prosumer Community of its kind in
-              California. A network of over seventy distributed energy resources
-              connected to develop benchmark data and create decarbonization
-              programs for Disadvantaged/Environmental Justice Communities.
+              We are implementing the largest ClimateTech Innovation Zone of its
+              kind in California. A network of over seventy distributed energy
+              resources connected to develop benchmark data and create
+              decarbonization programs for Disadvantaged/Environmental Justice
+              Communities.
             </p>
           </div>
           {/*video container*/}

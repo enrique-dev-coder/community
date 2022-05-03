@@ -4,9 +4,9 @@ import FadeinElement from '../FadeinElement'
 const Howwedoit = () => {
   return (
     <div className="relative max-w-[1440px] overflow-x-hidden lg:mx-auto lg:w-[95%]  lg:pt-14 xl:pt-0">
-      <div className="absolute hidden     lg:-right-[50px] lg:top-[3px] lg:block xl:top-[90px] xl:-right-[25px] ">
+      {/*   <div className="absolute hidden     lg:-right-[50px] lg:top-[3px] lg:block xl:top-[90px] xl:-right-[25px] ">
         <img src="/img/puzzleFill.png" />
-      </div>
+      </div> */}
       <div className="container mx-auto mb-20  flex w-4/5 flex-col lg:flex-row xl:max-w-6xl">
         {/*title and text container*/}
         <div className=" flex w-full flex-col justify-center  lg:w-[60%]">

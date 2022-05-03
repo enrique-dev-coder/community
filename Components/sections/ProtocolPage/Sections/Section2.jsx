@@ -10,11 +10,14 @@ const Section2 = () => {
     <Container>
       <SectionImageRight img="/img/protocol/image2.png">
         <ParagraphContainers textcolor={'black'} margin={false}>
-          <TittleIcon
-            img="/img/protocol/Assess.png"
-            title="Assess"
-            textColor="text-purpleCommunity"
-          />
+          <div className="hidden lg:block">
+            <TittleIcon
+              img="/img/protocol/Assess.png"
+              title="Assess"
+              textColor="text-purpleCommunity"
+            />
+          </div>
+
           <IconParagraph img="/img/protocol/pollution.png">
             <p>
               <b>Pollution:</b>

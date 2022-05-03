@@ -8,7 +8,7 @@ const ParagraphContainers = ({ children, textcolor, margin = false }) => {
       } lg:w-full lg:text-[15px] xl:w-4/5`}
       style={{
         fontFamily: " 'Montserrat', sans-serif",
-        marginRight: `${margin && '0'}`,
+        //marginRight: `${margin && '0'}`,
       }}
     >
       {children}

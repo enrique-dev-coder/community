@@ -16,8 +16,8 @@ export default function Home() {
     <>
       <Navbar src="/img/loogoletras.png" />
       <HeaderSection
-        src="/img/logo.png"
-        title="PROSUMER ELECTRICITY COMMUNITIES DECARBONIZING AT SCALE"
+        src="/img/whitelogohero.png"
+        title="VIRTUAL POWER PLANTS DECARBONIZING AT SCALE"
         titleColored="The new lungs of our cities"
       />
       <WhoWeAre />
