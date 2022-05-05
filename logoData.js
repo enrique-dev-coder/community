@@ -149,3 +149,55 @@ export const santaMonicaLogos = [
     img: '/img/partners/modal/CitySM.png',
   },
 ]
+
+export const labsLogos = [
+  {
+    id: 1,
+    img: '/img/partners/modal/California.png',
+  },
+  {
+    id: 2,
+    img: '/img/partners/modal/Community.png',
+  },
+  {
+    id: 3,
+    img: '/img/partners/modal/grid.png',
+  },
+  {
+    id: 4,
+    img: '/img/partners/modal/Blockchain.png',
+  },
+  {
+    id: 5,
+    img: '/img/partners/modal/USA.png',
+  },
+  {
+    id: 6,
+    img: '/img/partners/modal/ucla.png',
+  },
+]
+
+export const latamLogos = [
+  {
+    id: 1,
+    img: '/img/partners/modal/latam.png',
+  },
+]
+export const valenciaLogos = [
+  {
+    id: 1,
+    img: '/img/partners/modal/AmpereEnergy.png',
+  },
+  {
+    id: 2,
+    img: '/img/partners/modal/Community.png',
+  },
+  {
+    id: 3,
+    img: '/img/partners/modal/Solarays.png',
+  },
+  {
+    id: 4,
+    img: '/img/partners/modal/Idae.png',
+  },
+]

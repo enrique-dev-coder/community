@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import FadeInElement from '../Components/FadeinElement'
 const CaseDescriptionModal = ({
+  key,
   place,
   close,
   intro,
@@ -10,9 +11,10 @@ const CaseDescriptionModal = ({
   status,
   country,
   bgModalImage,
+  bigSpecialImage,
 }) => {
   return (
-    <div>
+    <div key={key}>
       <div className=" fixed inset-0 z-30 flex h-auto w-full flex-col  justify-center overflow-y-auto   bg-gray/75  backdrop-blur-sm  md:h-screen">
         <div className="relative m-auto mt-10 flex h-[90vh] w-4/5 flex-col overflow-y-auto md:flex-row md:overflow-y-hidden lg:h-[80vh] lg:w-[70%] xl:w-[80%]">
           {/*boton para cerrar el modal*/}
@@ -33,9 +35,12 @@ const CaseDescriptionModal = ({
               fontFamily: " 'Montserrat', sans-serif",
             }}
           >
-            <div
-              className={`h-[30%] w-full ${bgModalImage}  bg-cover bg-center bg-no-repeat`}
-            ></div>
+            {/*div que trae el fondo de la iamgen del modal*/}
+            {bgModalImage && (
+              <div
+                className={`h-[30%] w-full ${bgModalImage}  bg-cover bg-center bg-no-repeat`}
+              ></div>
+            )}
             <div className="mx-auto h-[70%] w-11/12  overflow-y-auto text-black ">
               {/*intro container*/}
               <div className="mt-10 flex flex-col justify-between md:flex-row">
@@ -57,20 +62,27 @@ const CaseDescriptionModal = ({
           <div className="hidden h-[400px] w-full flex-col justify-center bg-purpleCommunity md:flex md:h-full md:w-[40%] md:rounded-tr-md md:rounded-br-md ">
             <div className="mx-auto flex h-[300px]  w-11/12 flex-col justify-evenly border-b-2 border-b-white md:h-[60%]">
               {/*aqui va un map de content*/}
-              {content.map((c) => (
-                <div className="flex items-center space-x-2">
-                  <img src={c.img} className="h-[30px] w-[30px]" />
-                  <p
-                    className="flex-1 text-xs text-white md:text-sm"
-                    style={{
-                      fontFamily: " 'Montserrat', sans-serif",
-                    }}
-                  >
-                    {c.desc}
-                  </p>
-                  <img src="/img/check.png" />
-                </div>
-              ))}
+              {content &&
+                content.map((c) => (
+                  <div className="flex items-center space-x-2">
+                    <img src={c.img} className="h-[30px] w-[30px]" />
+                    <p
+                      className="flex-1 text-xs text-white md:text-sm"
+                      style={{
+                        fontFamily: " 'Montserrat', sans-serif",
+                      }}
+                    >
+                      {c.desc}
+                    </p>
+                    <img src="/img/check.png" />
+                  </div>
+                ))}
+              {bigSpecialImage && (
+                <img
+                  src={bigSpecialImage}
+                  className={`${place === 'LA' ? 'w-full' : 'w-[70%]'}`}
+                />
+              )}
             </div>
             <div className="mx-auto flex h-[30%] w-11/12 flex-col justify-center  ">
               <div className="flex h-[90%] flex-col justify-evenly">
@@ -86,7 +98,7 @@ const CaseDescriptionModal = ({
                   <img
                     src={contractor}
                     alt="contractor"
-                    className="ml-10 w-[150px] md:ml-0"
+                    className="ml-10 w-[100px] md:ml-0"
                   />
                 </div>
 

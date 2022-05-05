@@ -29,17 +29,32 @@ const NavbarFixedScroll = ({ src }) => {
       link: '#about',
     },
     {
-      title: 'Protocol',
-      link: '/protocol',
-    },
-
-    {
       title: 'Team',
       link: '/team/',
     },
     {
+      title: 'Protocol',
+      link: '/protocol',
+    },
+    {
+      title: 'Approach',
+      link: '/approach',
+    },
+    {
+      title: 'Services',
+      link: '/services',
+    },
+    {
+      title: 'marketplaces',
+      link: '/',
+    },
+    {
       title: 'Media',
       link: '#media',
+    },
+    {
+      title: 'Who we are',
+      link: '/',
     },
   ]
   return (
@@ -66,13 +81,16 @@ const NavbarFixedScroll = ({ src }) => {
           </Link>
         </div>
         {/*Contenedor de enlaces de navegacion*/}
-        <div className=" hidden w-3/6 flex-col items-center justify-center lg:flex">
-          <ul className="flex w-4/5 space-x-4">
+        <div className=" hidden w-[70%] flex-col items-center justify-center xl:flex">
+          <ul className="flex w-4/5 ">
             {links.map((li, i) => (
               <Link href={li.link} key={i}>
                 <li
                   key={i}
-                  className={` basis-1/3 cursor-pointer py-2 px-2 text-center text-lg font-semibold uppercase text-purpleCommunity hover:bg-purpleCommunityLight ${
+                  className={`${
+                    li.title === 'Who we are' &&
+                    'bg-purpleCommunity text-white '
+                  } basis-1/3 cursor-pointer py-2 text-center text-sm  font-semibold uppercase  hover:bg-purpleCommunityLight ${
                     top && 'hidden'
                   }`}
                 >
@@ -83,7 +101,7 @@ const NavbarFixedScroll = ({ src }) => {
           </ul>
         </div>
         {/*Contenedor del boton de menu*/}
-        <div className="mr-4 flex flex-col justify-center lg:hidden">
+        <div className="mr-4 flex flex-col justify-center xl:hidden">
           <MenuButton
             isOpen={isOpen}
             close={() => {
