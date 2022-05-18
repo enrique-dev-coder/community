@@ -11,6 +11,7 @@ import CommercialPilots from '../Components/sections/CommercialPilots'
 import BigPuzzle from '../Components/sections/BigPuzzle'
 import CommunityPilots from '../Components/sections/CommunityPilots'
 import ProsumerKit from '../Components/sections/ProsumerKit'
+import Strategy from '../Components/sections/Strategy'
 export default function Home() {
   return (
     <>
@@ -23,14 +24,14 @@ export default function Home() {
       <WhoWeAre />
       <Video
         videosrc="https://res.cloudinary.com/dhq3jcns5/video/upload/v1648491481/community/VIDEO-2022-03-14-15-16-18_uob4me.mp4"
-        imgsrc="/img/gifs/video1.gif"
-        menosDe1Min={true}
+        //imgsrc="/img/gifs/video1.gif"
+        //menosDe1Min={true}
       />
       <WhatWeDo />
       <Video
         videosrc="https://res.cloudinary.com/dhq3jcns5/video/upload/v1648491803/community/Untitled_design_4_ws8nnt.mp4"
-        imgsrc="/img/gifs/video2.gif"
-        menosDe1Min={true}
+        //imgsrc="/img/gifs/video2.gif"
+        //menosDe1Min={true}
       />
       <Howwedoit />
       {/*<KitSection />*/}
@@ -44,7 +45,15 @@ export default function Home() {
       {/*  <Cases /> */}
       <BigPuzzle />
       <CommunityPilots />
+      <Strategy />
       <ProsumerKit />
+      <div className="mt-16">
+        <Video
+          videosrc="https://res.cloudinary.com/dhq3jcns5/video/upload/v1652479085/community/Home_-_Gif_corto_ob8elk.mp4"
+          //imgsrc="https://res.cloudinary.com/dhq3jcns5/video/upload/v1652479085/community/Home_-_Gif_corto_ob8elk.gif"
+          //menosDe1Min={true}
+        />
+      </div>
       <Media />
       <Partners arrows={false} />
       <Footer />

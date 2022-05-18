@@ -2,6 +2,7 @@ import React from 'react'
 import FadeinElement from '../FadeinElement'
 import FadeinImg from '../FadeinImg'
 import Video from '../Video'
+import PlayMe from '../PlayMe'
 const CommercialPilots = () => {
   return (
     <div className="relative mb-20 max-w-[1440px] overflow-x-hidden lg:mx-auto lg:w-[95%]  lg:pt-14 xl:pt-0">
@@ -29,6 +30,7 @@ const CommercialPilots = () => {
           <FadeinImg src="/img/pilots.png" />
         </div> */}
       </div>
+      <PlayMe color="purpple" />
       <Video
         videosrc="https://res.cloudinary.com/dhq3jcns5/video/upload/v1648498616/community/VIDEO_NUEVO_1_evplm4.mp4"
         menosDe1Min={false}

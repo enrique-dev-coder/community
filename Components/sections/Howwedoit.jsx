@@ -1,6 +1,6 @@
 import React from 'react'
 import FadeinElement from '../FadeinElement'
-
+import Link from 'next/link'
 const Howwedoit = () => {
   return (
     <div className="relative max-w-[1440px] overflow-x-hidden lg:mx-auto lg:w-[95%]  lg:pt-14 xl:pt-0">
@@ -39,9 +39,11 @@ const Howwedoit = () => {
                 <b> benchmark, standardize and accelerate electrification.</b>
               </p>
             </FadeinElement>
-            <button className=" border-2 border-purpleCommunity px-8 py-2 text-sm font-bold  text-purpleCommunity lg:text-base">
-              Learn more
-            </button>
+            <Link href="/protocol">
+              <button className=" border-2 border-purpleCommunity px-8 py-2 text-sm font-bold  text-purpleCommunity lg:text-base">
+                Learn more
+              </button>
+            </Link>
           </div>
           {/*boton de learn more */}
         </div>

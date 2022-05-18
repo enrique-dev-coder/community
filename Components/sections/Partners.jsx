@@ -212,7 +212,7 @@ const Partners = ({ arrows }) => {
             //recuerda que el == se usa porque el array de ids esta en forma de strings
             (id) =>
               slide === id && (
-                <FadeInelement>
+                <FadeInelement key={id}>
                   <img
                     src={partnersLogos[slide].img}
                     alt="Our partners"

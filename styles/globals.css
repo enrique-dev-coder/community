@@ -16,6 +16,10 @@
 html {
   scroll-behavior: smooth;
 }
+/*cambiar a los puntitos*/
+:root {
+  --swiper-theme-color: #9885f7 !important;
+}
 body {
   font-family: 'Roboto Mono', monospace;
   background-color: white;
@@ -151,4 +155,23 @@ body {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+.swiper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px !important;
+  height: 300px !important;
+}
+
+.swiper-slide img {
+  display: block;
+}
+.mySwiper {
+  height: 450px;
+  margin-top: 80px;
 }

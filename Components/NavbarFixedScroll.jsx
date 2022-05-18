@@ -45,7 +45,7 @@ const NavbarFixedScroll = ({ src }) => {
       link: '/services',
     },
     {
-      title: 'marketplaces',
+      title: 'marketplace',
       link: '/',
     },
     {
@@ -53,7 +53,7 @@ const NavbarFixedScroll = ({ src }) => {
       link: '#media',
     },
     {
-      title: 'Who we are',
+      title: 'Contact Us',
       link: '/',
     },
   ]
@@ -88,7 +88,7 @@ const NavbarFixedScroll = ({ src }) => {
                 <li
                   key={i}
                   className={`${
-                    li.title === 'Who we are' &&
+                    li.title === 'Contact Us' &&
                     'bg-purpleCommunity text-white '
                   } basis-1/3 cursor-pointer py-2 text-center text-sm  font-semibold uppercase  hover:bg-purpleCommunityLight ${
                     top && 'hidden'

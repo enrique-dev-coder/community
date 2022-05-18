@@ -1,7 +1,6 @@
 import React from 'react'
-import FadeinTitle from '../FadeinTittle'
-import FadeinImg from '../FadeinImg'
 import FadeinElement from '../FadeinElement'
+import Link from 'next/link'
 const Aboutus = () => {
   return (
     <div className="relative mb-10 h-auto max-w-[1440px] overflow-x-hidden lg:mx-auto lg:h-[600px]  lg:w-[95%] lg:pt-24">
@@ -66,9 +65,11 @@ const Aboutus = () => {
         </div>
         {/*contenedor de iamgen y parrafo*/}
         <div className="col-span-3">
-          <button className="border-2 border-purpleCommunity px-8 py-2 text-sm font-bold  text-purpleCommunity lg:text-base">
-            Learn more
-          </button>
+          <Link href="/approach">
+            <button className="border-2 border-purpleCommunity px-8 py-2 text-sm font-bold  text-purpleCommunity lg:text-base">
+              Learn more
+            </button>
+          </Link>
         </div>
       </div>
     </div>

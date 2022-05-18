@@ -4,6 +4,7 @@ import FadeinElement from '../../FadeinElement'
 import CaseDescriptionModal from '../../CaseDescriptionModal'
 import PilotCardMobile from './PilotCardMobile'
 import FadeinParagraph from '../../FadeinElement'
+import Link from 'next/link'
 import {
   bassetAvocadoModals,
   santaanamodalLogos,
@@ -298,7 +299,7 @@ const index = () => {
           {data.map(
             (d) =>
               cardid === d.id && (
-                <FadeinParagraph>
+                <FadeinParagraph key={d.id}>
                   <PilotCardMobile
                     mobilebgImage={d.mobilebgImage}
                     place={d.place}
@@ -317,14 +318,16 @@ const index = () => {
             className="md:hidden"
             onClick={onClickLeftArrow}
           />
-          <p
-            className="cursor-pointer  rounded-sm  bg-purpleCommunity px-6 py-2 text-center font-bold text-white md:mr-[80px]"
-            style={{
-              fontFamily: " 'Montserrat', sans-serif",
-            }}
-          >
-            More pilots
-          </p>
+          <Link href="/approach">
+            <p
+              className="cursor-pointer  rounded-sm  bg-purpleCommunity px-6 py-2 text-center font-bold text-white md:mr-[80px]"
+              style={{
+                fontFamily: " 'Montserrat', sans-serif",
+              }}
+            >
+              APPROACH
+            </p>
+          </Link>
           <img
             src="/img/cases/FlechaDerecha.png"
             alt="flecha izquierda"

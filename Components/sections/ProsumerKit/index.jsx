@@ -1,5 +1,6 @@
 import React from 'react'
 import ScrollableImg from './ScrollableImg'
+import Link from 'next/Link'
 const index = () => {
   return (
     <div className="w-full " style={{ backgroundColor: '#120f12' }}>
@@ -11,14 +12,16 @@ const index = () => {
           <img src="/img/prosumer.GIF" alt="prosumer kit" />
         </div>
         <div>
-          <p
-            className=" mx-auto w-max  cursor-pointer  rounded-sm bg-purpleCommunity px-6 py-2 text-center font-bold text-white "
-            style={{
-              fontFamily: " 'Montserrat', sans-serif",
-            }}
-          >
-            More pilots
-          </p>
+          <Link href="/comingsoon">
+            <p
+              className=" mx-auto w-max cursor-pointer rounded-sm  bg-purpleCommunity px-6 py-2 text-center font-bold uppercase text-white "
+              style={{
+                fontFamily: " 'Montserrat', sans-serif",
+              }}
+            >
+              Marketplace
+            </p>
+          </Link>
         </div>
       </div>
     </div>

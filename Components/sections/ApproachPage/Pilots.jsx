@@ -37,6 +37,7 @@ const Pilots = () => {
       country: 'Los Angeles,California',
       bgModalImage: "bg-[url('/img/bassetmodal.png')]",
       mobilebgImage: "bg-[url('/img/cases/Bassetmobile.png')]",
+      specialCharacteristics: true,
       text: (
         <div className="mt-5 md:mt-0 md:h-full">
           <p className="mb-5 text-xs text-communitygray md:mt-5 md:text-sm">
@@ -88,7 +89,7 @@ const Pilots = () => {
           <LogoGrid imagenes={bassetAvocadoModals} />
         </div>
       ),
-      desc: 'ClimateTech Innovation Zone\n  Master Plan Program for Disadvantaged Communities',
+      desc: 'Virtual power plants\n  Master Plan Program for Disadvantaged Communities',
       img: '/img/cases/Basset.png',
       content: [
         {
@@ -123,6 +124,18 @@ const Pilots = () => {
       ],
       contractor: '/img/energycommission.png',
       status: 'Under implementation',
+      specialCharData: {
+        title:
+          'Virtual Power Plant Master Plan Program for disadvantiged communities',
+        listItems: [
+          'Location: Los Ángeles, CA',
+          'Population: 28K residents',
+          'Community Type: Retrofit Disadvantaged Community',
+          'Network: 50 homes',
+          'Technology: Advanced Energy Multi- Asset',
+          'Data Points: 100+',
+        ],
+      },
     },
     {
       id: 2,
@@ -130,6 +143,7 @@ const Pilots = () => {
       country: 'California',
       bgModalImage: "bg-[url('/img/santanamodalimage.png')]",
       mobilebgImage: "bg-[url('/img/cases/SantaAnamobile.png')]",
+      specialCharacteristics: true,
       intro:
         'Reimagining Affordable Mixed-Use Development in a Carbon-Constrained Future',
       text: (
@@ -174,7 +188,7 @@ const Pilots = () => {
           <LogoGrid imagenes={santaanamodalLogos} />
         </div>
       ),
-      desc: 'ClimateTech Innovation Zone\n  New 100% Electric Affordable Housing Program',
+      desc: 'Virtual power plants\n  New 100% Electric Affordable Housing Program',
       content: [
         {
           img: '/img/icons/EV Van Pooling.png',
@@ -204,6 +218,19 @@ const Pilots = () => {
       img: '/img/cases/SantaAna.png',
       contractor: '/img/energycommission.png',
       status: 'Design phase won',
+      specialCharData: {
+        title: 'Virtual Power Plant Master Plan Program Affordable Housing',
+        listItems: [
+          'Location: Santa Ana, CA',
+          'Units: 165',
+          'Population: 28K residents',
+          'Community Type: New construction affordable housing and commercial units',
+          'Network: 3 buildings',
+          'Technology: Distributed Energy Resources Deployment, Multi- Asset (100% electric + VVP + Microgrid)',
+          'EV Micro Transit',
+          'Data Points: 250+',
+        ],
+      },
     },
     {
       id: 3,
@@ -212,6 +239,7 @@ const Pilots = () => {
       intro: 'Advanced Prosumer Community',
       bgModalImage: "bg-[url('/img/santmonicamodalbg.png')]",
       mobilebgImage: "bg-[url('/img/cases/SantaMonicamobile.png')]",
+      specialCharacteristics: true,
       text: (
         <div className="mt-5 text-communitygray md:mt-0 md:h-full">
           <p className="mb-5 mt-5 text-sm ">
@@ -265,10 +293,21 @@ const Pilots = () => {
           desc: 'Carbon Management',
         },
       ],
-      desc: 'ClimateTech Innovation Zone\n  Affordable Housing, EV Infrastructure, Urban Hydro, Education & Training',
+      desc: 'Virtual power plants\n  Affordable Housing, EV Infrastructure, Urban Hydro, Education & Training',
       img: '/img/cases/SantaMonica.png',
       contractor: '/img/californiastrat.png',
       status: 'Under implementation',
+      specialCharData: {
+        title:
+          'Virtual Power Plant Master Plan Program city. wide affordable housing',
+        listItems: [
+          'Location: Santa Monica, CA ',
+          'Units: 52',
+          'Community Type: Retrofit and new construction',
+          'Technology: Distributed Energy Resources Deployment, Multi- Asset (VVP), EV Micro Transit',
+          'Data Points: 1000+',
+        ],
+      },
     },
     {
       id: 4,
@@ -277,6 +316,7 @@ const Pilots = () => {
       intro: '',
       bgModalImage: "bg-[url('/img/labsmodalbg.png')]",
       mobilebgImage: "bg-[url('/img/cases/impactMobile.png')]",
+      specialCharacteristics: false,
       text: (
         <div className="mt-5 text-communitygray md:mt-0 md:h-full">
           <p className="mb-5 mt-5  text-base ">
@@ -334,7 +374,7 @@ const Pilots = () => {
         },
       ],
       bigSpecialImage: '/img/cases/biglabimage.png',
-      desc: 'ClimateTech Innovation Zone\n  Community engagement, Student Education and Worforce Development',
+      desc: 'Virtual power plants\n  Community engagement, Student Education and Worforce Development',
       img: '/img/cases/SantaMonica.png',
       contractor: '/img/usacontractor.png',
       status: 'Under Evaluation',
@@ -346,6 +386,7 @@ const Pilots = () => {
       intro: 'Advanced Prosumer Community',
       bgModalImage: "bg-[url('/img/labsmodalbg.png')]",
       mobilebgImage: "bg-[url('/img/cases/laMobile.png')]",
+      specialCharacteristics: false,
       text: (
         <div className="mt-5 text-communitygray md:mt-0 md:h-full">
           <p className="mb-5 mt-5 text-sm ">
@@ -377,7 +418,7 @@ const Pilots = () => {
         </div>
       ),
 
-      desc: 'ClimateTech Innovation Zone\n  Knowledge Transfer, Policy Cnsulting, Education/ Worforce Development',
+      desc: 'Virtual power plants\n  Knowledge Transfer, Policy Cnsulting, Education/ Worforce Development',
       img: '/img/cases/SantaMonica.png',
       bigSpecialImage: '/img/latambigimage.png',
       contractor: '/img/californiastrat.png',
@@ -390,6 +431,7 @@ const Pilots = () => {
       intro: '',
       bgModalImage: "bg-[url('/img/valenciamodalimage.png')]",
       mobilebgImage: "bg-[url('/img/cases/valenciaMobile.png')]",
+      specialCharacteristics: false,
       text: (
         <div className="mt-5 text-communitygray md:mt-0 md:h-full">
           <p className="mb-5 mt-5 text-sm ">
@@ -422,7 +464,7 @@ const Pilots = () => {
           desc: 'Carbon Management',
         },
       ],
-      desc: 'ClimateTech Innovation Zone\n  Condominium Electrification, Solar Thermal, Transactive Energy Network',
+      desc: 'Virtual power plants\n  Condominium Electrification, Solar Thermal, Transactive Energy Network',
       img: '/img/cases/SantaMonica.png',
       contractor: '/img/usacontractor.png',
       status: 'Under Evaluation',
@@ -437,7 +479,7 @@ const Pilots = () => {
       </div>
       <FadeinParagraph>
         {/*tarjetitas para desktop*/}
-        <div className="mt-[70px] hidden flex-wrap lg:flex">
+        <div className="mt-[70px] hidden flex-wrap justify-between lg:flex">
           {data.map((d) => (
             <PilotCardMobile
               mobilebgImage={d.mobilebgImage}
@@ -445,6 +487,8 @@ const Pilots = () => {
               country={d.country}
               desc={d.desc}
               showModal={() => onClickCard(d.id)}
+              specialCharacteristics={d.specialCharacteristics}
+              specialCharData={d.specialCharData}
             />
           ))}
         </div>
@@ -461,6 +505,8 @@ const Pilots = () => {
                   country={d.country}
                   desc={d.desc}
                   showModal={() => onClickCard(d.id)}
+                  specialCharacteristics={d.specialCharacteristics}
+                  specialCharData={d.specialCharData}
                 />
               </FadeinParagraph>
             )

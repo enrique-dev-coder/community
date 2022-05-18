@@ -1,11 +1,11 @@
 import React from 'react'
-
+import PlayMe from '../PlayMe'
 const BigPuzzle = () => {
   return (
-    <section className=" mb-20 bg-purpleCommunity md:bg-purpleCommunityLight">
-      <div className="relative  max-w-[1440px] overflow-x-hidden lg:ml-auto lg:w-[95%]  lg:pt-14 xl:pt-0">
+    <section className=" my-20 bg-purpleCommunity md:bg-purpleCommunityLight">
+      <div className="relative max-w-[1440px]  overflow-x-hidden pt-10 lg:ml-auto lg:w-[95%]  lg:pt-14 xl:pt-0">
         {/*text container*/}
-        <div className="relative mx-auto flex h-[500px] w-[80%] flex-col bg-purpleCommunity md:mr-0 md:ml-auto md:flex-row">
+        <div className="relative mx-auto flex h-auto w-[80%] flex-col bg-purpleCommunity md:mr-0 md:ml-auto md:h-[500px] md:flex-row">
           {/*empty circle*/}
           <div className=" absolute right-[85%] bottom-[20%] z-0 hidden h-[300px] w-[300px] rounded-full bg-purpleCommunity md:block "></div>
           <p
@@ -37,8 +37,10 @@ const BigPuzzle = () => {
             </p>
           </div>
           {/*video container*/}
+
           <div className="mb-8 flex h-full w-full flex-col justify-center md:mb-0 md:w-[50%]">
             <div className="lg:w-[500px]">
+              <PlayMe />
               <video
                 src="https://res.cloudinary.com/dhq3jcns5/video/upload/v1648334813/community/VIDEO_LAPTOP_1_1_mutwag.mp4"
                 controls

@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/comingsoon.css'
 import type { AppProps } from 'next/app'
 import Layout from '../Components/wrappers/Layout'
 function MyApp({ Component, pageProps }: AppProps) {

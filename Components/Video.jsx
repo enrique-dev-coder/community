@@ -13,11 +13,12 @@ const Video = ({ videosrc, imgsrc, menosDe1Min }) => {
     <div className="mx-auto mb-16  w-4/5  lg:overflow-x-hidden xl:max-w-6xl">
       <video
         src={videosrc}
-        autoPlay={!isCellphone}
+        autoPlay={true}
         loop
         muted
         controls={isCellphone}
-        playsInline
+        playsInline={true}
+        preload="none"
         className={`mx-auto ${
           menosDe1Min && 'hidden'
         }  h-full w-full lg:block lg:w-10/12 `}
